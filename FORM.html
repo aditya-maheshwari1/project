@@ -1,0 +1,158 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Login Form</title>      
+</head>  
+<style> 
+body{  
+    margin: 0;  
+    padding: 0;  
+    font-family: 'Arial'; 
+    background: linear-gradient(to bottom right, #00ff99 45%, #bb33ff 55%);
+	 background-repeat: no-repeat;
+    background-size: 1700px 1000px;
+	 margin: auto; 
+}  
+.login{  
+    position: relative;
+    top: 100px;
+    width: 235px;  
+	 height: 310px;
+    overflow: hidden;  
+    margin: auto;    
+    padding: 100px;  
+    border-radius: 15px;  
+	 background-image: url("https://i.pinimg.com/originals/81/68/03/8168032e4d0f6f6f61287bb89a5b2d04.png");
+	 background-repeat: no-repeat;
+	 box-shadow: 5px 10px 18px #888888;
+    } 
+#Uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px; 
+	 position: relative;
+    top: 100px;
+	 left: -35px;
+    background-color:#e6e6e6; 
+	 border-radius: 25px;
+}  
+::placeholder {text-align: center;}
+
+#email{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px; 
+	 position: relative;
+    top: 100px;
+	 left: -35px;
+	 border-radius: 25px;
+    background-color:#e6e6e6;  
+    }
+#Pass{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px; 
+	 position: relative;
+    top: 100px;
+	 left: -35px;
+	 border-radius: 25px;
+	 background-color:#e6e6e6;  
+    }
+#num{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px; 
+    position: relative;
+    top: 100px;
+	 left: -35px;
+	 border-radius: 25px;
+	 background-color:#e6e6e6;  
+    }
+#resett{  
+    width: 150px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+	 position: relative;
+    top: 100px;
+	 left: -35px;
+	 border-radius: 25px;
+	background-color:#00ff99;  
+    }
+#log{  
+    width: 150px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+	 position: relative;
+    top: 70px;
+	 left: 120px;
+	 border-radius: 25px;
+	background-color:#cc66ff;  
+    }
+	
+</style>
+<body onload="document.Uname.focus();">
+     
+    <div class="login"> 
+	
+    <form name="myform" id="login" onsubmit="return validateForm()" action="home.html" method="post">     
+        <input type="text" name="Uname" id="Uname" placeholder="YOUR NAME" autofocus >    
+        <br><br> 
+		  <input type="email" name="email" id="email" placeholder="EMAIL">    
+        <br><br>
+        <input type="Password" name="Pass" id="Pass" placeholder="PASSWORD"> 
+        <br><br>  
+		  <input type="number" name="num" id="num" placeholder="PHONE">    
+        <br><br>
+		  <input type="button" onclick="myFunction()" id="resett" value="RESET">
+		  
+        <input type="submit" name="log" id="log"  value="REGISTER">
+        
+        <br><br>       
+    </form>  
+	<script>
+function myFunction() {
+  document.getElementById("login").reset();
+}
+
+function validateForm() {
+  var x = document.forms["myform"]["Uname"].value;
+  var y = document.forms["myform"]["email"].value;
+  var z = document.forms["myform"]["Pass"].value;
+  var o = document.forms["myform"]["num"].value;
+  
+  
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (y == "") {
+    alert("email must be filled out");
+    return false;
+  }
+  if (z == "") {
+    alert("password must be filled out");
+    return false;
+  }
+  if (o == "") {
+    alert("phone number must be filled out");
+    return false;
+  }
+  if (x == "rohit" && y == "rroo@gmail.com" && z == "1234567890" && o == "9876543210");
+    alert("YOU ARE VALID USER");
+}
+</script>
+</div>    
+</body>    
+</html>     
